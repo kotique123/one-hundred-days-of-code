@@ -132,3 +132,16 @@ func TestNumber_Exp(t *testing.T) {
 		})
 	}
 }
+
+func BenchmarkAllOperationsTogether(b *testing.B) {
+	var complexNumber1 Number
+	complexNumber1.real = 2
+	complexNumber1.imaginary = 3
+	var complexNumber2 Number
+	complexNumber2.real = 4
+	complexNumber2.imaginary = 5
+	factor := 2.0
+	for i := 0; i < b.N; i++ {
+		complexNumber1.AllOperationsTogether(factor, complexNumber2)
+	}
+}

@@ -1,6 +1,8 @@
 package complexnumbers
 
-import "math"
+import (
+	"math"
+)
 
 type Number struct {
 	real      float64 // real part
@@ -68,4 +70,19 @@ func (n Number) Exp() Number {
 	number.real = math.Cos(n.imaginary)
 	number.imaginary = math.Sin(n.imaginary)
 	return number.Times(math.Exp(n.real))
+}
+
+// AllOperationsTogether is a function used to benchmark the solution and it
+// wasn't included in original Exercism problem.
+func (n1 Number) AllOperationsTogether(factor float64, n2 Number) {
+	n1.Real()
+	n1.Imaginary()
+	n1.Add(n2)
+	n1.Subtract(n2)
+	n1.Multiply(n2)
+	n1.Times(factor)
+	n1.Divide(n2)
+	n1.Conjugate()
+	n1.Abs()
+	n1.Exp()
 }

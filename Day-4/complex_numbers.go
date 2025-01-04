@@ -18,18 +18,15 @@ func (n Number) Imaginary() float64 {
 }
 
 func (n1 Number) Add(n2 Number) Number {
-	var number Number
-	number.real = n1.real + n2.real
-	number.imaginary = n1.imaginary + n2.imaginary
-	return number
-
+	n1.real += n2.real
+	n1.imaginary += n2.imaginary
+	return n1
 }
 
 func (n1 Number) Subtract(n2 Number) Number {
-	var number Number
-	number.real = n1.real - n2.real
-	number.imaginary = n1.imaginary - n2.imaginary
-	return number
+	n1.real -= n2.real
+	n1.imaginary -= n2.imaginary
+	return n1
 }
 
 func (n1 Number) Multiply(n2 Number) Number {
@@ -40,10 +37,9 @@ func (n1 Number) Multiply(n2 Number) Number {
 }
 
 func (n Number) Times(factor float64) Number {
-	var number Number
-	number.real = n.real * factor
-	number.imaginary = n.imaginary * factor
-	return number
+	n.real = n.real * factor
+	n.imaginary = n.imaginary * factor
+	return n
 }
 
 func (n1 Number) Divide(n2 Number) Number {
@@ -54,10 +50,8 @@ func (n1 Number) Divide(n2 Number) Number {
 }
 
 func (n Number) Conjugate() Number {
-	var number Number
-	number.real = n.real
-	number.imaginary = (-1) * n.imaginary
-	return number
+	n.imaginary = (-1) * n.imaginary
+	return n
 }
 
 func (n Number) Abs() float64 {

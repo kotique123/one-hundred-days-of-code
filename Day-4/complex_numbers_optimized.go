@@ -1,5 +1,3 @@
-// uncomment this file to work with it
-/*
 package complexnumbers
 
 import (
@@ -82,4 +80,3 @@ func (n1 Number) AllOperationsTogether(factor float64, n2 Number) {
 	n1.Abs()
 	n1.Exp()
 }
-*/

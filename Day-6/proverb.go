@@ -21,9 +21,9 @@ func Proverb(rhyme []string) []string {
 		proverb := []string{(last + rhyme[0] + ".")}
 		return proverb
 	} else if len(rhyme) > 1 {
-		// initalize a non empty slince in which we will write data based by
-		// its index. I found that this solution is more performant than
-		// using append or using print funcitons from fmt.
+		// initalize a non empty slince in which we will write data based on
+		// its index. I found out that this solution is more performant than
+		// using append keyword or using print funcitons from fmt package.
 		proverb := make([]string, len(rhyme))
 		for i := 0; i < len(rhyme)-1; i++ {
 			proverb[i] = (pre + rhyme[i] + " the " + rhyme[i+1] + " was lost.")

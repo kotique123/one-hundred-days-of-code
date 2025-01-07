@@ -1,12 +1,17 @@
+// Package protein is a small library that implements function to translate proteins.
 package protein
 
 import (
 	"errors"
 )
 
+// ErrStop is a variable that represents an error when encounters a stop codon.
 var ErrStop = errors.New("stop sequence")
+
+// ErrInvalidBase is a variable that represents an error when encounters invalid RNA sequence.
 var ErrInvalidBase = errors.New("invalid protein base")
 
+// FromRNA takes an RNA sequence and returns a slice of proteins and an error value.
 func FromRNA(rna string) ([]string, error) {
 	if len(rna)%3 != 0 {
 		return nil, ErrInvalidBase
@@ -31,6 +36,7 @@ func FromRNA(rna string) ([]string, error) {
 
 }
 
+// FromCodon takes a codon string and returns name of protein and an error value.
 func FromCodon(codon string) (string, error) {
 	switch codon {
 	case "AUG":

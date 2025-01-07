@@ -25,20 +25,17 @@ func (n Number) Imaginary() float64 {
 // Add combines real and imaginary parts of two complex numbers and returns a
 // Number.
 func (n1 Number) Add(n2 Number) Number {
-	var number Number
-	number.real = n1.real + n2.real
-	number.imaginary = n1.imaginary + n2.imaginary
-	return number
-
+	n1.real += n2.real
+	n1.imaginary += n2.imaginary
+	return n1
 }
 
 // Subtract subtracts real and imaginary parts of two complex numbers and
 // returns a Number.
 func (n1 Number) Subtract(n2 Number) Number {
-	var number Number
-	number.real = n1.real - n2.real
-	number.imaginary = n1.imaginary - n2.imaginary
-	return number
+	n1.real -= n2.real
+	n1.imaginary -= n2.imaginary
+	return n1
 }
 
 // Multiply multiplies two numbers according to a formula and returns a
@@ -52,10 +49,9 @@ func (n1 Number) Multiply(n2 Number) Number {
 
 // Times multiplies two parts of a number by a factor and returns a Number.
 func (n Number) Times(factor float64) Number {
-	var number Number
-	number.real = n.real * factor
-	number.imaginary = n.imaginary * factor
-	return number
+	n.real = n.real * factor
+	n.imaginary = n.imaginary * factor
+	return n
 }
 
 // Divide divides two Numbers according to a formula and returns a Number.
@@ -68,10 +64,8 @@ func (n1 Number) Divide(n2 Number) Number {
 
 // Conjugate returns a conjugate of a Number.
 func (n Number) Conjugate() Number {
-	var number Number
-	number.real = n.real
-	number.imaginary = (-1) * n.imaginary
-	return number
+	n.imaginary = (-1) * n.imaginary
+	return n
 }
 
 // Abs returns an abosulte value of a Number.

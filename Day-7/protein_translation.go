@@ -14,14 +14,12 @@ func FromRNA(rna string) ([]string, error) {
 		var proteins []string
 		start := 0
 		end := 3
-		index := 0
 		var status error
 		var acid string
 		for end <= len(rna) {
 			acid, status = FromCodon(rna[start:end])
 			if status == nil {
 				proteins = append(proteins, acid)
-				index++
 				start += 3
 				end += 3
 			} else {

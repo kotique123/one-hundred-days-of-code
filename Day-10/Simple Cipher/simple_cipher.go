@@ -4,7 +4,6 @@
 package cipher
 
 import (
-	"regexp"
 	"slices"
 )
 
@@ -78,13 +77,16 @@ func (c shift) Decode(input string) string {
 
 // NewVigenere returns a Cipher type of a key if it is valid.
 func NewVigenere(key string) Cipher {
-	pattern := `^[a-z]+$`
-	re := regexp.MustCompile(pattern)
-	matches_format := re.MatchString(key)
+	matches_format := true
 	not_all_a := false
 	for i := 0; i < len(key); i++ {
 		if key[i] != 97 {
 			not_all_a = true
+		}
+		if key[i] >= 97 && key[i] <= 122 {
+			matches_format = true
+		} else {
+			matches_format = false
 			break
 		}
 	}

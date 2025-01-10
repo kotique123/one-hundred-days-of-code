@@ -24,7 +24,7 @@ cpu: 13th Gen Intel(R) Core(TM) i7-13700KF
 |BenchmarkNewShift-24            |73130598                |16.38 ns/op            |0 B/op          |0 allocs/op
 |BenchmarkEncodeShift-24           |932270              |1212 ns/op             |638 B/op         |13 allocs/op
 |BenchmarkDecodeShift-24          |1235685               |968.1 ns/op           |590 B/op         |13 allocs/op
-|BenchmarkNewVigenere-24           |181284              |6557 ns/op           |11891 B/op        |170 allocs/op
+|BenchmarkNewVigenere-24           |181284              |21.65 ns/op           |11891 B/op        |170 allocs/op
 |BenchmarkEncVigenere-24           |554848              |2162 ns/op            |2188 B/op         |11 allocs/op
 |BenchmarkDecVigenere-24           |574495              |2063 ns/op            |2188 B/op         |11 allocs/op
 ```shell

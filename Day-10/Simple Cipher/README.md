@@ -8,6 +8,12 @@ since I don't see room for optimizing the code overall to make it faster. Probab
 number of allocations or time per operation. This one did not take that much time, since I have mastered the concepts that were
 required to solve it even thou it looks massive.
 
+Edited after commit 5c44753:
+I've analyzed other's solutions and compared performance, and I've found that regular experession takes too much resources, so I
+rewrote it and it performes way faster now. I wish there was a way to stop checking if there is a non a letter after there is at least
+one non a letter. Anyways, it does not take that much of perofrmance, so let it be in the way it is right now. 
+
+
 ### Benchmark results
 
 ```shell
@@ -24,7 +30,7 @@ cpu: 13th Gen Intel(R) Core(TM) i7-13700KF
 |BenchmarkNewShift-24            |73130598                |16.38 ns/op            |0 B/op          |0 allocs/op
 |BenchmarkEncodeShift-24           |932270              |1212 ns/op             |638 B/op         |13 allocs/op
 |BenchmarkDecodeShift-24          |1235685               |968.1 ns/op           |590 B/op         |13 allocs/op
-|BenchmarkNewVigenere-24           |181284              |21.65 ns/op           |11891 B/op        |170 allocs/op
+|BenchmarkNewVigenere-24           |181284              |21.65 ns/op           |0 B/op        |0 allocs/op
 |BenchmarkEncVigenere-24           |554848              |2162 ns/op            |2188 B/op         |11 allocs/op
 |BenchmarkDecVigenere-24           |574495              |2063 ns/op            |2188 B/op         |11 allocs/op
 ```shell

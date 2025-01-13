@@ -1,41 +1,25 @@
-# Nth Prime
+# Day 12 
 
-Welcome to Nth Prime on Exercism's Go Track.
-If you need help running the tests or submitting your code, check out `HELP.md`.
+## Nth Prime
 
-## Instructions
+### Benchmark results 
 
-Given a number n, determine what the nth prime is.
+```shell
+goos: darwin
+goarch: arm64
+pkg: prime
+cpu: Apple M1
+```
 
-By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+|Benchmark Title|Number of iterations|Average time per operation|Number of bytes allocated per operation|Number of memory allocations per operation
+|:---|:---|:---|:---|:---
+|BenchmarkNth-8               |482           |2334180 ns/op               |0 B/op          |0 allocs/op
+|BenchmarkNth-8               |512           |2336114 ns/op               |0 B/op          |0 allocs/op
+|BenchmarkNth-8               |513           |2328801 ns/op               |0 B/op          |0 allocs/op
+|BenchmarkNth-8               |512           |2330727 ns/op               |0 B/op          |0 allocs/op
+|BenchmarkNth-8               |512           |2334802 ns/op               |0 B/op          |0 allocs/op
 
-If your language provides methods in the standard library to deal with prime numbers, pretend they don't exist and implement them yourself.
-
-For inputs lesser than `1`, the nth prime number can't be computed. In that case, your function must return an error. The error message should be descriptive of the error. In case the input is inside a valid range, the function must return the actual prime number and no error.
-
-## Source
-
-### Created by
-
-- @soniakeys
-
-### Contributed to by
-
-- @alebaffa
-- @bitfield
-- @ekingery
-- @ferhatelmas
-- @hilary
-- @ilmanzo
-- @kytrinyx
-- @leenipper
-- @petertseng
-- @robphoenix
-- @sebito91
-- @tleen
-- @MikaeelMF
-- @eklatzer
-
-### Based on
-
-A variation on Problem 7 at Project Euler - https://projecteuler.net/problem=7
+```shell
+PASS
+ok      prime   7.337s
+```

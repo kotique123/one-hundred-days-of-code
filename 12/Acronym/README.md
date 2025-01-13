@@ -1,55 +1,25 @@
-# Acronym
+# Day 12
 
-Welcome to Acronym on Exercism's Go Track.
-If you need help running the tests or submitting your code, check out `HELP.md`.
+## Acronym
 
-## Instructions
+### Benchmark results
 
-Convert a phrase to its acronym.
+```shell
+goos: darwin
+goarch: arm64
+pkg: acronym
+cpu: Apple M1
+```
 
-Techies love their TLA (Three Letter Acronyms)!
+|Benchmark Title|Number of iterations|Average time per operation|Number of bytes allocated per operation|Number of memory allocations per operation
+|:---|:---|:---|:---|:---
+|BenchmarkAcronym-8        |594974              |1965 ns/op            |1272 B/op         |39 allocs/op
+|BenchmarkAcronym-8        |585213              |1971 ns/op            |1272 B/op         |39 allocs/op
+|BenchmarkAcronym-8        |562820              |1971 ns/op            |1272 B/op         |39 allocs/op
+|BenchmarkAcronym-8        |574878              |1971 ns/op            |1272 B/op         |39 allocs/op
+|BenchmarkAcronym-8        |578889              |1992 ns/op            |1272 B/op         |39 allocs/op
 
-Help generate some jargon by writing a program that converts a long name like Portable Network Graphics to its acronym (PNG).
-
-Punctuation is handled as follows: hyphens are word separators (like whitespace); all other punctuation can be removed from the input.
-
-For example:
-
-| Input                     | Output |
-| ------------------------- | ------ |
-| As Soon As Possible       | ASAP   |
-| Liquid-crystal display    | LCD    |
-| Thank George It's Friday! | TGIF   |
-
-## Source
-
-### Created by
-
-- @Akasurde
-
-### Contributed to by
-
-- @alebaffa
-- @antimatter96
-- @bitfield
-- @colinking
-- @da-edra
-- @ekingery
-- @felixbuenemann
-- @ferhatelmas
-- @hilary
-- @ilmanzo
-- @kytrinyx
-- @leenipper
-- @mattcbaker
-- @petertseng
-- @robphoenix
-- @sebito91
-- @strangeman
-- @tleen
-- @usmanismail
-- @eklatzer
-
-### Based on
-
-Julien Vanier - https://github.com/monkbroc
+```shell
+PASS
+ok      acronym 6.600s
+```

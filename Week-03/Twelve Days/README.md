@@ -1,68 +1,34 @@
-# Twelve Days
+# Day 16
 
-Welcome to Twelve Days on Exercism's Go Track.
-If you need help running the tests or submitting your code, check out `HELP.md`.
+## Twelve Days
 
-## Instructions
+Today I've solved yet another easy problem. It is the last easy program that is
+available on Exercism for Go lang. By the end of this poriton of easy problems, I
+can tell that I feel very good about all of them. I've solved some of them before I
+started this challenge so by the end of this portion I felt like just by looking at
+problem I already know the solution, or at least approach to it. I enjoyed writing
+my own benchmarks and comments with accordance to Godoc format, and I really
+enjoy doing this and documenting my solutions and its performance.
 
-Your task in this exercise is to write code that returns the lyrics of the song: "The Twelve Days of Christmas."
+### Benchmark results
 
-"The Twelve Days of Christmas" is a common English Christmas carol.
-Each subsequent verse of the song builds on the previous verse.
-
-The lyrics your code returns should _exactly_ match the full song text shown below.
-
-## Lyrics
-
-```text
-On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.
-
-On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.
-
-On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
-
-On the fourth day of Christmas my true love gave to me: four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
-
-On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
-
-On the sixth day of Christmas my true love gave to me: six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
-
-On the seventh day of Christmas my true love gave to me: seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
-
-On the eighth day of Christmas my true love gave to me: eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
-
-On the ninth day of Christmas my true love gave to me: nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
-
-On the tenth day of Christmas my true love gave to me: ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
-
-On the eleventh day of Christmas my true love gave to me: eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
-
-On the twelfth day of Christmas my true love gave to me: twelve Drummers Drumming, eleven Pipers Piping, ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.
+```shell
+goos: darwin
+goarch: arm64
+pkg: twelve
+cpu: Apple M1
 ```
 
-## Source
+|Benchmark Title|Number of iterations|Average time per operation|Number of bytes allocated per operation|Number of memory allocations per operation
+|:---|:---|:---|:---|:---
+|BenchmarkVerse-8          |297706              |4019 ns/op           |13264 B/op         |88 allocs/op
+|BenchmarkVerse-8          |292642              |4013 ns/op           |13264 B/op         |88 allocs/op
+|BenchmarkVerse-8          |285434              |3998 ns/op           |13264 B/op         |88 allocs/op
+|BenchmarkSong-8           |215997              |5510 ns/op           |26512 B/op        |100 allocs/op
+|BenchmarkSong-8           |212336              |5470 ns/op           |26512 B/op        |100 allocs/op
+|BenchmarkSong-8           |217429              |5527 ns/op           |26512 B/op        |100 allocs/op
 
-### Created by
-
-- @Akasurde
-
-### Contributed to by
-
-- @alebaffa
-- @bitfield
-- @ekingery
-- @ferhatelmas
-- @hilary
-- @IsaacG
-- @leenipper
-- @mcaci
-- @nywilken
-- @PatrickMcSweeny
-- @robphoenix
-- @sebito91
-- @tleen
-- @eklatzer
-
-### Based on
-
-Wikipedia - https://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)
+```shell
+PASS
+ok      twelve  8.319s
+```

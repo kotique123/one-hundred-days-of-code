@@ -1,6 +1,6 @@
-# Day 10 #
+# Day 10
 
-## Sum of Multiples ##
+## Sum of Multiples
 
 Today I have solved the sum of multiples problem in Golang. Honestly, I don't like
 my approach at all since it is too point blank and basically bruteforcing. I tried to

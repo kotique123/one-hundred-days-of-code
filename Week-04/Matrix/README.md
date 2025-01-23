@@ -20,6 +20,8 @@ pkg: matrix
 cpu: Apple M1
 ```
 
+### Generation 1
+
 |Benchmark Title|Number of iterations|Average time per operation|Number of bytes allocated per operation|Number of memory allocations per operation
 |:---|:---|:---|:---|:---
 |BenchmarkNew-8           |1782790               |640.5 ns/op          |1488 B/op         |15 allocs/op
@@ -32,4 +34,18 @@ cpu: Apple M1
 ```shell
 PASS
 ok      matrix  22.605s
+```
+
+|Benchmark Title|Number of iterations|Average time per operation|Number of bytes allocated per operation|Number of memory allocations per operation
+|:---|:---|:---|:---|:---
+|BenchmarkNew-8           |2174440               |508.6 ns/op           |744 B/op         |12 allocs/op
+|BenchmarkNew-8           |2413344               |503.4 ns/op           |744 B/op         |12 allocs/op
+|BenchmarkRows-8          |9678108               |115.1 ns/op           |192 B/op          |5 allocs/op
+|BenchmarkRows-8         |10022906               |119.2 ns/op           |192 B/op          |5 allocs/op
+|BenchmarkCols-8          |8865831               |134.9 ns/op           |288 B/op          |6 allocs/op
+|BenchmarkCols-8          |8884830               |139.1 ns/op           |288 B/op          |6 allocs/op
+
+```shell
+PASS
+ok      matrix  8.864s
 ```

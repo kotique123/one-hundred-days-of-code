@@ -35,6 +35,7 @@ cpu: Apple M1
 PASS
 ok      matrix  22.605s
 ```
+### Generation 2
 
 |Benchmark Title|Number of iterations|Average time per operation|Number of bytes allocated per operation|Number of memory allocations per operation
 |:---|:---|:---|:---|:---
